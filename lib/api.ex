@@ -3,16 +3,16 @@ defmodule Esms.Api do
   require Logger
   alias __MODULE__, as: Self
 
-  @result_codes %{
-    "100" => "Request đã được nhận và xử lý thành công",
-    "100" => "Request đã được nhận và xử lý thành công",
-    "104" => "Brandname không tồn tại hoặc đã bị hủy",
-    "118" => "Loại tin nhắn không hợp lệ",
-    "119" => "Brandname quảng cáo phải gửi ít nhất 20 số điện thoại",
-    "131" => "Tin nhắn brandname quảng cáo độ dài tối đa 422 kí tự",
-    "132" => "Không có quyền gửi tin nhắn đầu số cố định 8755",
-    "99" => "Lỗi không xác định"
-  }
+  # @result_codes %{
+  #   "100" => "Request đã được nhận và xử lý thành công",
+  #   "100" => "Request đã được nhận và xử lý thành công",
+  #   "104" => "Brandname không tồn tại hoặc đã bị hủy",
+  #   "118" => "Loại tin nhắn không hợp lệ",
+  #   "119" => "Brandname quảng cáo phải gửi ít nhất 20 số điện thoại",
+  #   "131" => "Tin nhắn brandname quảng cáo độ dài tối đa 422 kí tự",
+  #   "132" => "Không có quyền gửi tin nhắn đầu số cố định 8755",
+  #   "99" => "Lỗi không xác định"
+  # }
 
   def request(method, url, body, request_headers, hn_options) do
     Logger.debug("method: #{inspect(method)}")
