@@ -14,8 +14,8 @@ config :esms,
   api_key: System.get_env("ESMS_API_KEY"),
   secret_key: System.get_env("ESMS_SECRET_KEY"),
   brandname: System.get_env("ESMS_BRANDNAME"),
-  sms_type: String.to_integer(System.get_env("ESMS_SMS_TYPE")),
-  sandbox: String.to_integer(System.get_env("ESMS_SANDBOX")) || 1
+  sms_type: String.to_integer(System.get_env("ESMS_SMS_TYPE") || "2"),
+  sandbox: String.to_integer(System.get_env("ESMS_SANDBOX") || "1")
 
 #
 # and access this configuration in your application as:

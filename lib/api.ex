@@ -66,7 +66,7 @@ defmodule Esms.Api do
       "Phone" => phone,
       "Content" => message,
       "APIKey" => Application.get_env(:esms, :api_key),
-      "SecretKey" => Application.get_env(:esms, :api_key),
+      "SecretKey" => Application.get_env(:esms, :secret_key),
       "SmsType" => Application.get_env(:esms, :sms_type),
       "Brandname" => Application.get_env(:esms, :brandname),
       "Sandbox" => Application.get_env(:esms, :sandbox)
